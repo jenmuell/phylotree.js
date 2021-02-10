@@ -1,5 +1,4 @@
 const parseString = require('xml2js').parseString;
-import * as $ from 'jquery';
 
 (function() {
   var d3_layout_phylotree_event_id = "d3.layout.phylotree.event",
