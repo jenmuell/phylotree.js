@@ -2502,7 +2502,9 @@ const $ = require('jquery');
         }
 
         labels
-          .on("click", phylotree.handle_node_click)
+          .on("click", function(d){if(d.children){    // HERE IS A CHANGE: collapse modal only for inner nodes
+                                    return phylotree.handle_node_click(d);
+                                    }})
           .attr("dy", function (d) {
             return shown_font_size * 0.33;
           })
