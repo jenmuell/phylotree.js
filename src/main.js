@@ -2504,6 +2504,8 @@ const $ = require('jquery');
         labels
           .on("click", function(d){if(d.children){    // HERE IS A CHANGE: collapse modal only for inner nodes
                                     return phylotree.handle_node_click(d);
+                                    }else if (window.location.href.includes('Unique')){
+                                    return window.open('https://www.ncbi.nlm.nih.gov/protein/'.concat(d.name), '_blank');
                                     }})
           .attr("dy", function (d) {
             return shown_font_size * 0.33;
